@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blender-ko-3d"
+version = "1.1.0"
+description = "Knight Online Blender extension and standalone N3 asset analysis CLI"
+requires-python = ">=3.11"
+readme = "README.md"
+authors = [{name = "Zorlanis"}]
+license = "GPL-2.0-or-later"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+dependencies = []
+
+[project.scripts]
+ko-assets = "blender_ko_3d.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["blender_ko_3d*"]
+
+[tool.setuptools.package-data]
+blender_ko_3d = ["blender_manifest.toml"]

@@ -1,0 +1,27 @@
+# Python caches and local environments
+__pycache__/
+*.py[codz]
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+.env
+
+# Build products
+build/
+dist/
+*.egg-info/
+*.zip
+
+# Client data and generated analysis
+ko_assets/
+outputs/
+*.log
+
+# Local editor and operating system files
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db
